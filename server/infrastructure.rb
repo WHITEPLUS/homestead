@@ -1,5 +1,5 @@
-class Homestead
-  def Homestead.configure(config, settings)
+class Infrastructure
+  def Infrastructure.configure(config, settings)
     # Configure The Box
     config.vm.box = "laravel/homestead"
     config.vm.hostname = "homestead"
@@ -50,10 +50,10 @@ class Homestead
     settings["sites"].each do |site|
       config.vm.provision "shell" do |s|
           if (site.has_key?("hhvm") && site["hhvm"])
-            s.inline = "bash /vagrant/scripts/serve-hhvm.sh $1 $2"
+            s.inline = "bash /vagrant/server/serve-hhvm.sh $1 $2"
             s.args = [site["map"], site["to"]]
           else
-            s.inline = "bash /vagrant/scripts/serve.sh $1 $2"
+            s.inline = "bash /vagrant/server/serve.sh $1 $2"
             s.args = [site["map"], site["to"]]
           end
       end
