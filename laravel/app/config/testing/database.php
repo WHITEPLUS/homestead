@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.01',
-			'database'  => 'circle_test',
-			'username'  => 'ubuntu',
-			'password'  => '',
+			'database'  => 'homestead_test',
+			'username'  => 'root',
+			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
