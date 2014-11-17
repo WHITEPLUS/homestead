@@ -14,4 +14,12 @@ class ExampleTest extends TestCase {
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
 
+	/**
+	 * @test
+	 */
+	public function migrate()
+	{
+        Artisan::call('migrate');
+	}
+
 }
