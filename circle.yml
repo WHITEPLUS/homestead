@@ -3,7 +3,8 @@ machine:
     version: 5.4.21
 dependencies:
   pre:
-    - echo "memory_limit = 1024M" > ~/.phpenv/versions/5.4.21/etc/conf.d/memory.ini
+    - echo "memory_limit = 1024M" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/memory.ini
+#    - cp config/custom.ini ~/.phpenv/versions/$(phpenv global)/etc/conf.d/
 #  override:
 #    - composer install --prefer-source --no-interaction --no-dev
 database:
