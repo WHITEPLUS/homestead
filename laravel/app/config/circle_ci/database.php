@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'circle',
+	'default' => 'circle_ci',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ return array(
 
 	'connections' => array(
 
-		'circle' => array(
+		'circle_ci' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.01',
 			'database'  => 'circle_test',

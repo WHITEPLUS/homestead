@@ -6,6 +6,9 @@ dependencies:
     - echo "memory_limit = 1024M" > ~/.phpenv/versions/5.4.21/etc/conf.d/memory.ini
 #  override:
 #    - composer install --prefer-source --no-interaction --no-dev
+database:
+  override:
+    - cp laravel/app/config/circle_ci/database.php laravel/app/config/testing/database.php
 test:
   override:
     - cd laravel; vendor/bin/phpunit
