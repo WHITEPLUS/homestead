@@ -9,7 +9,7 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: .
+    - map: ./laravel
       to: /home/vagrant/laravel
 
 sites:
